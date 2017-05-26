@@ -12,12 +12,7 @@ class CustomCell: UITableViewCell {
 
     var item: ViewModelItem? {
         didSet {
-            guard  let item = item else {
-                return
-            }
-            
-            titleLabel?.text = item.title
-            isSelected = item.isSelected
+            titleLabel?.text = item?.title
         }
     }
     
@@ -42,8 +37,5 @@ class CustomCell: UITableViewCell {
 
         // update UI
         accessoryType = selected ? .checkmark : .none
-        
-        // update ViewModel item
-        item?.isSelected = selected
     }
 }

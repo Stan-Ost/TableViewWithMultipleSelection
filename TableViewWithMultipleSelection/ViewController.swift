@@ -22,50 +22,17 @@ class ViewController: UIViewController {
         tableView?.estimatedRowHeight = 100
         tableView?.rowHeight = UITableViewAutomaticDimension
         tableView?.allowsMultipleSelection = true
-        tableView?.dataSource = self
-        tableView?.delegate = self
+        tableView?.dataSource = viewModel
+        tableView?.delegate = viewModel
         tableView?.separatorStyle = .none
         
-        setButtonEnabled()
+        viewModel.didToggleSelection = { [weak self] hasSelection in
+            self?.nextButton?.isEnabled = hasSelection
+        }
     }
     
     @IBAction func next(_ sender: Any) {
         print(viewModel.selectedItems.map { $0.title })
-    }
-    
-    fileprivate func setButtonEnabled() {
-        nextButton?.isEnabled = !viewModel.selectedItems.isEmpty
-    }
-}
-
-extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.items.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.identifier, for: indexPath) as? CustomCell {
-            cell.item = viewModel.items[indexPath.row]
-            return cell
-        }
-        return UITableViewCell()
-    }
-}
-
-extension ViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        setButtonEnabled()
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        setButtonEnabled()
-    }
-    
-    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        if viewModel.selectedItems.count >= 3 {
-            return nil
-        }
-        return indexPath
+        tableView?.reloadData()
     }
 }

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D16E5D5BE8DB6F2BD8D159F664F0CD522177CA43",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B908FBBEF4923292D4BCC732310C23C1058FB8DF" : 9223372036854775807,
+    "D16E5D5BE8DB6F2BD8D159F664F0CD522177CA43" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3CD17F2C-0DBB-47C5-8820-3F0A2D5850BE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B908FBBEF4923292D4BCC732310C23C1058FB8DF" : "",
+    "D16E5D5BE8DB6F2BD8D159F664F0CD522177CA43" : "TableViewWithMultipleSelection\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TableViewWithMultipleSelection",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TableViewWithMultipleSelection.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Stan-Ost\/TableViewMVVM",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B908FBBEF4923292D4BCC732310C23C1058FB8DF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Stan-Ost\/TableViewWithCollapsibleSections.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D16E5D5BE8DB6F2BD8D159F664F0CD522177CA43"
+    }
+  ]
+}
